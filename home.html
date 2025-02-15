@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareCart</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    
+    
+        
+        <div class="nav-part">
+            <div class="logo">
+                <img src="logo.png" alt=""> <p>ompareCart</p>
+            </div>
+          
+            
+            <div class="list">
+                <ul>
+                    <li><a href="home.html">Home <i class="ri-home-smile-fill"></i></a></li>
+                    <li><a href="categories.html">Categories <i class="ri-menu-search-fill"></i></a></li>
+                    <li><a href="product.html"> Wishlist <i class="ri-gift-line"></i></a></li>
+                    <li><a href="cart.html" id="cart">Cart <i class="ri-shopping-cart-fill"></i></a></li>
+                    <li class="account-link">
+                        <a href="#" id="account-link">Account <i class="ri-account-circle-fill"></i></a>
+                        <div class="dropdown-menu" id="account-dropdown">
+                            <!-- User details section -->
+                            <div id="user-details" style="display: none;">
+                              <p id="user-name"></p>
+                              <p id="user-username"></p>
+                            </div>
+                          
+                            <!-- Sign Up and Sign In links -->
+                            <a href="signup.html" id="signup-button" class="dropdown-item signup"><p class="signin-text">Sign Up</p></a>
+                            <a href="signin.html" id="signin-button" class="dropdown-item signin"><p class="signin-text">Sign In</p></a>
+                          
+                            <!-- Logout button -->
+                            <a href="#" id="logout-button" class="dropdown-item logout" style="display: none;"><p class="signin-text">Logout</p></a>
+                          </div>    
+                </ul>
+            </div>
+        </div>
+    
+
+    
+    <div class="main-part">
+        <div class="text-content">
+            <h2>Explore, Shop, Repeat Again...</h2>
+            <p class="quote">
+                "Fashion is not just about the clothes you wear, it's about the impression you leave."
+                <br>
+                "Stay classy, sassy, and a bit bad-assy!"
+            </p>
+            <a href="#popular-products" class="explore-button">Explore Now</a>
+        </div>
+        <div class="slider">
+            <img class="slider-image" src="https://cdn.create.vista.com/api/media/small/196884578/stock-photo-smiling-stylish-asian-woman-shopping-bags-yellow-background" alt="Fashion Image">
+        </div>
+    </div>
+
+    <div id = "popular-products"  class="popular-products">
+        <h3>Your Journey Starts Here - Explore Our Categories!</h3>
+        <h5>"Find Your Perfect Fit – Discover Fashion That Fits Your Lifestyle"</h5>
+        <div class="box_container">
+        <div class="card__container">
+           <article class="card__article">
+              <img src="assets/img/landscape-1.png" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <span class="card__description">Up To 50% Off</span>
+                 <h2 class="card__title">Women's Traditional</h2>
+                 <a href="categories.html" class="card__button">Explore</a>
+              </div>
+           </article>
+
+           <article class="card__article">
+            <img src="assets/img/landscape-6.png" alt="image" class="card__img">
+
+            <div class="card__data">
+               <span class="card__description">Min. 40% Off</span>
+               <h2 class="card__title">Men's Western</h2>
+               <a href="categories.html" class="card__button">Explore</a>
+            </div>
+         </article> 
+           <article class="card__article">
+              <img src="assets/img/landscape-3.png" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <span class="card__description"> 40-60% Off</span>
+                 <h2 class="card__title">Electronics</h2>
+                 <a href="categories.html" class="card__button">Explore</a>
+              </div>
+           </article> 
+           <article class="card__article">
+              <img src="assets/img/landscape-4.png.jpg" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <span class="card__description">Up To 70% Off</span>
+                 <h2 class="card__title">Kids</h2>
+                 <a href="categories.html" class="card__button">Explore</a>
+              </div>
+           </article> 
+           <article class="card__article">
+              <img src="assets/img/landscape-5.png" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <span class="card__description"> Min. 20% Off</span>
+                 <h2 class="card__title">Women's Western</h2>
+                 <a href="categories.html" class="card__button">Explore</a>
+              </div>
+           </article> 
+           <article class="card__article">
+            <img src="assets/img/landscape-2.png" alt="image" class="card__img">
+
+            <div class="card__data">
+               <span class="card__description">Up To 40-50% Off</span>
+               <h2 class="card__title">Men's Traditional</h2>
+               <a href="categories.html" class="card__button">Explore</a>
+            </div>
+         </article>
+        </div>    
+     </div> 
+    </div>
+   
+
+
+    <section>
+        <div class="rectangle-container">
+            <div class="rectangle-box">
+                <h2>All Your Favorite Collectibles are Right here</h2>
+                <p>It doesn't take extra effort to get what you want on CompareCart</p>
+                    <button><a href="categories.html">Shop Now</a></button>
+            </div>
+            <!-- <div class="button">
+              <button>Show More</button>
+            </div> -->
+        </div>
+    
+    </section>
+    
+    
+    
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="video/3127085-hd_1920_1080_24fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+    
+    <section>
+      <div class="img-box">
+        <div class="bottom-img">
+            <img src="https://zola.in/cdn/shop/articles/dress_Banner.jpg?v=1686032761" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    
+    <footer>
+        <div class="footer_container">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="logo.png" alt=""> <p>ompareCart</p>
+                </div>
+                <p class="footer-para">Shop Smarter, Compare Better, and Save Like Never Before!
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3 class="text-office">
+                    Office
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p>Street No 5</p>
+                <p>Gulistan Colony</p>
+                <p>Faisalabad Punjab, Pakistan</p>
+
+                <p class="email">info.finegap@gmail.com</p>
+                <p class="phone">+92 304 110 0028</p>
+            </div>
+            <div class="footer-col">
+                <h3>
+                    Menu
+                    <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>
+                    Newsletter
+                    <div class="underline"><span></span></div>
+                </h3>
+                <form action="">
+                    <i class="ri-mail-fill"></i>
+                    <input type="text" placeholder="Enter Company Email">
+                    <a href=""><i class="ri-arrow-right-line"></i></a>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

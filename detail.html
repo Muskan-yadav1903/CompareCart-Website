@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareCart</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+
+    <div class="nav-part">
+        <div class="logo">
+            <img src="logo.png" alt=""> <p>ompareCart</p>
+        </div>
+      
+        
+        <div class="list">
+            <ul>
+                <li><a href="home.html">Home <i class="ri-home-smile-fill"></i></a></li>
+                <li><a href="categories.html">Categories <i class="ri-menu-search-fill"></i></a></li>
+                <li><a href="product.html"> Wishlist <i class="ri-gift-line"></i></a></li>
+                <li><a href="cart.html" id="cart">Cart <i class="ri-shopping-cart-fill"></i></a></li>
+                <li class="account-link">
+                    <a href="#" id="account-link">Account <i class="ri-account-circle-fill"></i></a>
+                    <div class="dropdown-menu" id="account-dropdown">
+                        <!-- User details section -->
+                        <div id="user-details" style="display: none;">
+                          <p id="user-name"></p>
+                          <p id="user-username"></p>
+                        </div>
+                      
+                        <!-- Sign Up and Sign In links -->
+                        <a href="signup.html" id="signup-button" class="dropdown-item signup"><p class="signin-text">Sign Up</p></a>
+                        <a href="signin.html" id="signin-button" class="dropdown-item signin"><p class="signin-text">Sign In</p></a>
+                      
+                        <!-- Logout button -->
+                        <a href="#" id="logout-button" class="dropdown-item logout" style="display: none;"><p class="signin-text">Logout</p></a>
+                      </div>    
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="title">Product</div>
+        <div class="detail">
+            <div class="image">
+                <img src="">
+                <div class="thumbnails"></div>
+            </div>
+            <div class="content">
+                <h1 class="name"></h1>
+                <div class="price"></div>
+                <h2 id="colorthumbnailsh2">Colour Available:<p class="selected-color-name">Selected Color: </p> </h2>
+                <div class="colorthumbnails"></div>
+                <h2 id="sizeoptionsh2">Select Your size:</h2>
+                <div class="size-options"></div>
+                <div class="buttons">
+                    <button class="add-to-wishlist">Add to wishlist</button>
+                    <button class="add-to-cart">Add To Cart 
+                        <span>
+                            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="compare-btn">Compare it</button>
+                </div>
+                <div class="description"></div>
+            </div>
+        </div>
+        <div id="custom-alert" class="custom-alert">
+            <div class="alert-content">
+                <span id="alert-message"></span>
+                <button id="close-alert">OK</button>
+            </div>
+        </div>
+
+        <div id="overlay-2"></div>
+
+<!-- Alert Box 2 -->
+<div id="alert-box">
+    <h3>Alert</h3>
+    <div id="alert-box-message"></div>
+    <button id="alert-box-close">OK</button>
+</div>
+        <div class="similarheading">Similar Products</div>
+<div class="slider-container">
+    <button class="prev-btn">❮</button>
+    <div class="listProduct slider"></div>
+    <button class="next-btn">❯</button>
+</div>
+    </div>
+     
+    <footer>
+        <div class="footer_container">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="logo.png" alt=""> <p>ompareCart</p>
+                </div>
+                <p class="footer-para">Shop Smarter, Compare Better, and Save Like Never Before!
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3 class="text-office">
+                    Office
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p>Street No 5</p>
+                <p>Gulistan Colony</p>
+                <p>Faisalabad Punjab, Pakistan</p>
+
+                <p class="email">info.finegap@gmail.com</p>
+                <p class="phone">+92 304 110 0028</p>
+            </div>
+            <div class="footer-col">
+                <h3>
+                    Menu
+                    <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>
+                    Newsletter
+                    <div class="underline"><span></span></div>
+                </h3>
+                <form action="">
+                    <i class="ri-mail-fill"></i>
+                    <input type="text" placeholder="Enter Company Email">
+                    <a href=""><i class="ri-arrow-right-line"></i></a>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="detail.js"></script>
+</body>
+</html>

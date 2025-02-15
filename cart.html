@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareCart</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="nav-part">
+        <div class="logo">
+            <img src="logo.png" alt=""> <p>ompareCart</p>
+        </div>
+      
+        
+        <div class="list">
+            <ul>
+                <li><a href="home.html">Home <i class="ri-home-smile-fill"></i></a></li>
+                <li><a href="categories.html">Categories <i class="ri-menu-search-fill"></i></a></li>
+                <li><a href="wishlist.html"> Wishlist <i class="ri-gift-line"></i></a></li>
+                <li class="account-link">
+                    <a href="#" id="account-link">Account <i class="ri-account-circle-fill"></i></a>
+                    <div class="dropdown-menu" id="account-dropdown">
+                        <!-- User details section -->
+                        <div id="user-details" style="display: none;">
+                          <p id="user-name"></p>
+                          <p id="user-username"></p>
+                        </div>
+                      
+                        <!-- Sign Up and Sign In links -->
+                        <a href="signup.html" id="signup-button" class="dropdown-item signup"><p class="signin-text">Sign Up</p></a>
+                        <a href="signin.html" id="signin-button" class="dropdown-item signin"><p class="signin-text">Sign In</p></a>
+                      
+                        <!-- Logout button -->
+                        <a href="#" id="logout-button" class="dropdown-item logout" style="display: none;"><p class="signin-text">Logout</p></a>
+                      </div>    
+            </ul>
+        </div>
+    </div>
+        <div class="container">
+            <div class="title">Shopping Cart</div>
+            <div class="cart-items"></div>
+        </div>
+     
+        <footer>
+            <div class="footer_container">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="logo.png" alt=""> <p>ompareCart</p>
+                    </div>
+                    <p class="footer-para">Shop Smarter, Compare Better, and Save Like Never Before!
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="text-office">
+                        Office
+                        <div class="underline"><span></span></div>
+                    </h3>
+                    <p>Street No 5</p>
+                    <p>Gulistan Colony</p>
+                    <p>Faisalabad Punjab, Pakistan</p>
+    
+                    <p class="email">info.finegap@gmail.com</p>
+                    <p class="phone">+92 304 110 0028</p>
+                </div>
+                <div class="footer-col">
+                    <h3>
+                        Menu
+                        <div class="underline"><span></span></div>
+                    </h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>
+                        Newsletter
+                        <div class="underline"><span></span></div>
+                    </h3>
+                    <form action="">
+                        <i class="ri-mail-fill"></i>
+                        <input type="text" placeholder="Enter Company Email">
+                        <a href=""><i class="ri-arrow-right-line"></i></a>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script>
+
+const accountLink = document.querySelector('.account-link');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+// Add a delay for showing the dropdown menu
+let hoverTimeout;
+accountLink.addEventListener('mouseenter', () => {
+    hoverTimeout = setTimeout(() => {
+        dropdownMenu.style.display = 'block';
+    }, 200); // Delay the dropdown by 200ms
+});
+
+// Hide the dropdown immediately if mouse leaves
+accountLink.addEventListener('mouseleave', () => {
+    clearTimeout(hoverTimeout);
+    dropdownMenu.style.display = 'none';
+});
+
+
+// document.getElementById('search').addEventListener('click', function() {
+//     const searchQuery = document.getElementById('search-input').value.trim();
+//     if (searchQuery) {
+//         // Redirect to categories.html with the search query as a URL parameter
+//         window.location.href = `categories.html?search=${encodeURIComponent(searchQuery)}`;
+//     } else {
+//         alert('Please enter a search term.');
+//     }
+// });
+
+    // window.onload = function() {
+    //   const token = localStorage.getItem('token');
+    //   const username = localStorage.getItem('username'); // If you stored the username
+
+    //   if (token) {
+    //     // User is logged in, show their details or home page content
+    //     document.getElementById('welcome-message').textContent = `Welcome, ${username}!`;
+    //   } else {
+    //     // User is not logged in, redirect to login page
+    //     window.location.href = 'login.html';
+    //   }
+    // };
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+        const accountLink = document.getElementById('account-link');
+        const userDetailsDiv = document.getElementById('user-details');
+        const logoutButton = document.getElementById('logout-button');
+        const signupButton = document.getElementById('signup-button');
+        const signinButton = document.getElementById('signin-button');
+      
+        // Check if the user is logged in
+        if (userDetails) {
+          // Update the account link to show the user's name
+          accountLink.textContent = `Account (${userDetails.name})`;
+      
+          // Show user details
+          document.getElementById('user-name').textContent = `Name: ${userDetails.name}`;
+          document.getElementById('user-username').textContent = `Username: ${userDetails.username}`;
+          userDetailsDiv.style.display = 'block';
+      
+          // Show logout button, hide sign-up and sign-in buttons
+          signupButton.style.display = 'none';
+          signinButton.style.display = 'none';
+          logoutButton.style.display = 'block';
+        } else {
+          // Reset account link text
+          accountLink.textContent = 'Account';
+      
+          // Hide user details and logout button
+          userDetailsDiv.style.display = 'none';
+          logoutButton.style.display = 'none';
+      
+          // Show sign-up and sign-in buttons
+          signupButton.style.display = 'block';
+          signinButton.style.display = 'block';
+        }
+      });
+      
+      // Handle account link click
+      document.getElementById('account-link').addEventListener('click', () => {
+        const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+        const userDetailsDiv = document.getElementById('user-details');
+        const logoutButton = document.getElementById('logout-button');
+      
+        if (userDetails) {
+          // Update user details dynamically
+          document.getElementById('user-name').textContent = `Name: ${userDetails.name}`;
+          document.getElementById('user-username').textContent = `Username: ${userDetails.username}`;
+      
+          // Show user details and logout button
+          userDetailsDiv.style.display = 'block';
+          logoutButton.style.display = 'block';
+        } else {
+          // Hide user details and logout button if no user is logged in
+          userDetailsDiv.style.display = 'none';
+          logoutButton.style.display = 'none';
+        }
+      });
+      
+      // Handle logout button click
+      document.getElementById('logout-button').addEventListener('click', () => {
+        localStorage.removeItem('token'); // Clear token
+        localStorage.removeItem('userDetails'); // Clear user details
+        alert('You have been logged out.');
+        window.location.href = 'signin.html'; // Redirect to sign-in page
+      });
+
+      
+      
+
+function loadCart() {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    console.log('Loaded cart:', cartItems);
+
+    let cartItemsContainer = document.querySelector('.cart-items');
+    cartItemsContainer.innerHTML = '';
+
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+        return;
+    }
+
+    cartItems.forEach((item, index) => {
+        let price = typeof item.price === 'string'
+            ? parseFloat(item.price.replace(/[^0-9.]/g, ''))
+            : item.price;
+
+        if (isNaN(price)) {
+            console.error(`Invalid price for item at index ${index}: ${item.price}`);
+            price = 0; 
+        }
+
+        const itemTotal = price * item.quantity;
+
+        const row = document.createElement('div');
+        row.classList.add('cart-item');
+
+       
+        row.innerHTML = `
+           <img src="${item.image}" alt="${item.productName}" class="cart-item-image" data-id="${item.id}">
+            <div class="cart-item-details">
+                <h2>${item.productName}</h2>
+                <p>Size: ${item.size || 'N/A'}</p>
+                <p>Price: ₹${price.toLocaleString()}</p>
+            </div>
+            <div class="quantity-controls">
+                <button data-index="${index}" class="decrease-qty">-</button>
+                <input type="text" value="${item.quantity}" readonly>
+                <button data-index="${index}" class="increase-qty">+</button>
+            </div>
+            <div class="cart-item-total">₹${itemTotal.toLocaleString()}</div>
+            <div><button data-index="${index}" class="remove-btn">Remove</button></div>
+        `;
+        cartItemsContainer.appendChild(row);
+    });
+
+    
+
+    // Adding event listener for cart actions
+    cartItemsContainer.addEventListener('click', function (event) {
+        const target = event.target;
+        const index = target.getAttribute('data-index');
+
+        if (target.classList.contains('remove-btn')) {
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            loadCart();
+        }
+
+        if (target.classList.contains('increase-qty')) {
+            cartItems[index].quantity++;
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            loadCart();
+        }
+
+        if (target.classList.contains('decrease-qty')) {
+            if (cartItems[index].quantity > 1) {
+                cartItems[index].quantity--;
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                loadCart();
+            }
+        }
+    });
+
+    cartItemsContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('cart-item-image')) {
+        const productId = event.target.getAttribute('data-id');
+        window.location.href = `/frontend/detail.html?id=${productId}`;
+    }
+});
+
+}
+
+// Load cart items on page load
+document.addEventListener('DOMContentLoaded', loadCart);
+
+
+
+    </script>
+</body>
+</html>

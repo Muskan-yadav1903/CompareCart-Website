@@ -1,0 +1,543 @@
+body{
+    font-family: cursive;
+    margin: 0;
+    font-size: 16px;
+    background-color: #f4f4f4;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-part {
+    width: 98%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 7px 13px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px; 
+    height: 100px;
+    margin-top: 10px; 
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.logo p{
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    left: -5px;
+}
+
+.logo:hover {
+    color: #61c3ff; 
+    transition: color 0.3s;
+    transform: translateY(-3px);
+}
+
+.logo {
+    flex: 1;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+/* Style for the Account link */
+/* Parent container for account link */
+.account-link {
+    position: relative; /* To position the dropdown relative to the parent */
+    display: flex;
+    align-items: center; /* Align the account link with other list items */
+    cursor: pointer;
+}
+
+/* Styling for the account link anchor tag */
+.account-link a {
+    text-decoration: none;
+    color: #fff; /* Keep consistent with other links */
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the dropdown below the Account link */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px; /* Ensure it appears above other elements */
+    transition: all 0.3s ease;
+}
+
+/* Show dropdown menu on hover */
+.account-link:hover  .dropdown-menu:hover {
+    display: block;
+}
+
+/* Dropdown buttons (Sign Up, Sign In, Logout) */
+.dropdown-item {
+    display: block;
+    width: 100%; /* Ensure buttons span the full dropdown width */
+    padding: 10px 0; /* Equal padding for better visibility */
+    margin: 10px 0; /* Spacing between buttons */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+/* 3D effect on hover */
+.dropdown-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Sign Up button styles */
+.signup {
+    width: 120px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4ff452, #39ce63);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.signup:hover {
+    background: linear-gradient(135deg, #7effb6, #40e359);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Sign In button styles */
+.signin {
+    width: 120px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #75eaff, #7eeeff);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.signin:hover {
+    background: linear-gradient(135deg, #7edaff, #75f1ff);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.signin-text{
+    color: #fff;
+}
+/* Logout button styles */
+.logout {
+    background: linear-gradient(145deg, #e76e7a, #e43f50);
+    color: #fff;
+}
+
+
+.logout:hover {
+    background: linear-gradient(145deg, #d13a49, #bf3745);
+}
+
+
+/* Ensure all buttons align properly inside the dropdown */
+#user-details {
+    margin-bottom: 15px;
+    text-align: center; /* Center-align the username details */
+}
+
+#user-name,
+#user-username {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Style for the list items */
+.list ul {
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+    align-items: center; /* Align all list items (including Account) */
+}
+
+/* Style for each list item */
+.list ul li {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+/* Style for the anchor tags within the list items */
+.list ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Hover effect for list items */
+.list ul li:hover {
+    color: #ff6f61;
+    transform: translateY(-3px);
+}
+
+/* header nav{
+    border-left: 1px solid var(--border-color); 
+    background-color: #000;
+} */
+
+  
+/*  */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px; /* Adjust according to the navbar height */
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+/* Form container styles */
+#loginForm {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Ensure content stacks vertically */
+}
+
+/* Form title styles */
+#loginForm h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styles */
+#loginForm input {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Input hover and focus effects */
+#loginForm input:hover, 
+#loginForm input:focus {
+    border-color: #75faff;
+    box-shadow: inset 0 4px 6px rgba(117, 255, 244, 0.2), 0 0 10px rgba(117, 248, 255, 0.392);
+}
+
+/* Button styles */
+#loginForm button {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #75eaff, #7eeeff);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+#loginForm button:hover {
+    background: linear-gradient(135deg, #7edaff, #75f1ff);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Button active effect */
+#loginForm button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*"Sign in" link styles */
+.signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.signup-link a {
+    color: #5691ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #3d7aff;
+}
+
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ef2e1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 7px 13px -3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show Alert Box */
+#custom-alert.show {
+    opacity: 1;
+}
+
+/* Title */
+#custom-alert h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Alert Message */
+#alert-message {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+/* Close Button */
+#close-alert {
+    padding: 10px 20px;
+    background-color: #ea473b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    align-self: center; /* Center the button */
+}
+
+#close-alert:hover {
+    background-color: #ef2e1c;
+}
+
+/* Dark Overlay */
+#dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+    z-index: 999; /* Position it behind the alert */
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#dark-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+footer{
+    background: linear-gradient(to right, #ff6f61, #c14639);
+    border-top-left-radius: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+footer *{
+    color: white;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 7%;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col ::placeholder{
+    color: #f1e9e9;
+}
+
+.footer-col h2{
+    font-optical-sizing: 1.7em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p.email{
+    margin: 30px 0;
+}
+
+p.phone{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-col .text-office{
+    margin-bottom: 20px;
+}
+.underline{
+    width: 70px;
+    height: 3px;
+    position: relative;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.underline span{
+    width: 7px;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    background-color: rgb(247, 45, 45);
+    border-radius: 3px;
+    animation: moving 1.5s linear infinite;
+}
+
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.footer-col ul{
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.footer-col ul li {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-col ul li:hover {
+    transform: translateX(5px); 
+}
+
+
+.footer-col form{
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.footer-col form input{
+    width: 70%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.footer-col form i{
+    font-size: 15px;
+}
+
+.footer-col .social-icons{
+    margin-top: 20px;
+}
+
+.footer-col .social-icons i{
+    padding: 10px;
+    background-color: white;
+    color: #1e1e1f;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.footer-col .social-icons i:hover{
+    background-color: #ff6f61;
+    transition: 0.5s;
+}
+
+.footer-para{
+    max-width: 250px;
+}

@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: cursive;
+    margin: 0;
+    font-size: 16px;
+    background-color: #f4f4f4;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --border-color: #fff5;
+    --w-image: 400px;
+    --calculate: calc(2/ 2);
+}
+/* header{
+    display: grid;
+    grid-template-columns: 80px 1fr calc(var(--w-image) * var(--calculate));
+    grid-template-rows: 80px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #f5fcff;
+}
+header .logo img{
+    width: 80%;
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+
+
+
+
+
+
+
+
+.nav-part {
+    width: 98%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 7px 13px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px; 
+    height: 100px;
+    margin-top: 10px; 
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.logo p{
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    left: -5px;
+}
+
+.logo:hover {
+    color: #61c3ff; 
+    transition: color 0.3s;
+    transform: translateY(-3px);
+}
+
+.logo {
+    flex: 1;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+/* Style for the Account link */
+/* Parent container for account link */
+.account-link {
+    position: relative; /* To position the dropdown relative to the parent */
+    display: flex;
+    align-items: center; /* Align the account link with other list items */
+    cursor: pointer;
+}
+
+/* Styling for the account link anchor tag */
+.account-link a {
+    text-decoration: none;
+    color: #fff; /* Keep consistent with other links */
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the dropdown below the Account link */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px; /* Ensure it appears above other elements */
+    transition: all 0.3s ease;
+}
+
+/* Show dropdown menu on hover */
+.account-link:hover  .dropdown-menu:hover {
+    display: block;
+}
+
+/* Dropdown buttons (Sign Up, Sign In, Logout) */
+.dropdown-item {
+    display: block;
+    width: 100%; /* Ensure buttons span the full dropdown width */
+    padding: 10px 0; /* Equal padding for better visibility */
+    margin: 10px 0; /* Spacing between buttons */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+/* 3D effect on hover */
+.dropdown-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Sign Up button styles */
+.signup {
+    width: 120px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4ff452, #39ce63);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.signup:hover {
+    background: linear-gradient(135deg, #7effb6, #40e359);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Sign In button styles */
+.signin {
+    width: 120px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #75eaff, #7eeeff);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.signin:hover {
+    background: linear-gradient(135deg, #7edaff, #75f1ff);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.signin-text{
+    color: #fff;
+}
+/* Logout button styles */
+.logout {
+    background: linear-gradient(145deg, #e76e7a, #e43f50);
+    color: #fff;
+}
+
+
+.logout:hover {
+    background: linear-gradient(145deg, #d13a49, #bf3745);
+}
+
+
+/* Ensure all buttons align properly inside the dropdown */
+#user-details {
+    margin-bottom: 15px;
+    text-align: center; /* Center-align the username details */
+}
+
+#user-name,
+#user-username {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Style for the list items */
+.list ul {
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+    align-items: center; /* Align all list items (including Account) */
+}
+
+/* Style for each list item */
+.list ul li {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+/* Style for the anchor tags within the list items */
+.list ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Hover effect for list items */
+.list ul li:hover {
+    color: #ff6f61;
+    transform: translateY(-3px);
+}
+
+
+/* header nav{
+    border-left: 1px solid var(--border-color); 
+    background-color: #000;
+} */
+
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+
+
+
+
+.main-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.text-content {
+    max-width: 70%;
+    margin-top:5% ;
+}
+
+.main-part h2 {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #e65a50;
+}
+
+.slider {
+    max-width: 55%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+.popular-products {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.popular-products h3 {
+    font-size: 28px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 7px 13px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.popular-products h5 {
+    font-size: 20px;
+    color: #666;
+    /* margin-bottom: 40px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rectangle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+.rectangle-container .rectangle-box {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    background-color: #fff;
+
+}
+
+.rectangle-container .rectangle-box h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    /* width: 75%; */
+}
+
+.rectangle-container .rectangle-box p {
+    font-size: 1.5em;
+    color: #666;
+}
+
+.rectangle-container .rectangle-box button {
+    /* width: 50%; */
+    padding: 20px 30px;
+    background-color: #7185bd;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    position: absolute;
+    left: 80%;
+    /* bottom: 20%; */
+    /* overflow: hidden; */
+}
+
+.rectangle-container .rectangle-box a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.img-box {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%; /* 16:9 aspect ratio (9 / 16 * 100) */
+}
+
+.img-box .bottom-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.img-box .bottom-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+footer{
+    background: linear-gradient(to right, #ff6f61, #c14639);
+    border-top-left-radius: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+footer *{
+    color: white;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 7%;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col ::placeholder{
+    color: #f1e9e9;
+}
+
+.footer-col h2{
+    font-optical-sizing: 1.7em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p.email{
+    margin: 30px 0;
+}
+
+p.phone{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-col .text-office{
+    margin-bottom: 20px;
+}
+.underline{
+    width: 70px;
+    height: 3px;
+    position: relative;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.underline span{
+    width: 7px;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    background-color: rgb(247, 45, 45);
+    border-radius: 3px;
+    animation: moving 1.5s linear infinite;
+}
+
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.footer-col ul{
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.footer-col ul li {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-col ul li:hover {
+    transform: translateX(5px); 
+}
+
+
+.footer-col form{
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.footer-col form input{
+    width: 70%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.footer-col form i{
+    font-size: 15px;
+}
+
+.footer-col .social-icons{
+    margin-top: 20px;
+}
+
+.footer-col .social-icons i{
+    padding: 10px;
+    background-color: white;
+    color: #1e1e1f;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.footer-col .social-icons i:hover{
+    background-color: #ff6f61;
+    transition: 0.5s;
+}
+
+.footer-para{
+    max-width: 250px;
+}

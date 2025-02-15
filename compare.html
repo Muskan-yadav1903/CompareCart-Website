@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareCart</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="compare.css">
+</head>
+<body>
+    <div class="nav-part">
+        <div class="logo">
+            <img src="logo.png" alt=""> <p>ompareCart</p>
+        </div>
+        
+        <div class="list">
+            <ul>
+                <li><a href="home.html">Home <i class="ri-home-smile-fill"></i></a></li>
+                <li><a href="categories.html">Categories <i class="ri-menu-search-fill"></i></a></li>
+                <li class="account-link">
+                    <a href="#" id="account-link">Account <i class="ri-account-circle-fill"></i></a>
+                    <div class="dropdown-menu" id="account-dropdown">
+                        <!-- User details section -->
+                        <div id="user-details" style="display: none;">
+                          <p id="user-name"></p>
+                          <p id="user-username"></p>
+                        </div>
+                      
+                        <!-- Sign Up and Sign In links -->
+                        <a href="signup.html" id="signup-button" class="dropdown-item signup"><p class="signin-text">Sign Up</p></a>
+                        <a href="signin.html" id="signin-button" class="dropdown-item signin"><p class="signin-text">Sign In</p></a>
+                      
+                        <!-- Logout button -->
+                        <a href="#" id="logout-button" class="dropdown-item logout" style="display: none;"><p class="signin-text">Logout</p></a>
+                      </div>    
+            </ul>
+        </div>
+    </div>
+    
+    
+    <div class="compare-container">
+        <h1>Compare Products</h1>
+        <div class="dropdown-container">
+            <label for="comparisonProduct">Select Product for Comparison:</label>
+            <select id="comparisonProduct">
+                <!-- Product options will be dynamically populated here -->
+            </select>
+        </div>
+        
+        <div class="compare-section">
+            <div class="selected-product">
+                <h2>Selected Product</h2>
+                <div class="product-card" id="selectedProductCard">
+                    <!-- Product details will be populated here -->
+                </div>
+            </div>
+            
+            <div class="similar-products">
+                <h2>Similar Products</h2>
+                <div id="similarProductCards">
+                    <!-- Similar product cards will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <footer>
+        <div class="footer_container">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="logo.png" alt=""> <p>ompareCart</p>
+                </div>
+                <p class="footer-para">Shop Smarter, Compare Better, and Save Like Never Before!
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3 class="text-office">
+                    Office
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p>Street No 5</p>
+                <p>Gulistan Colony</p>
+                <p>Faisalabad Punjab, Pakistan</p>
+
+                <p class="email">info.finegap@gmail.com</p>
+                <p class="phone">+92 304 110 0028</p>
+            </div>
+            <div class="footer-col">
+                <h3>
+                    Menu
+                    <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>
+                    Newsletter
+                    <div class="underline"><span></span></div>
+                </h3>
+                <form action="">
+                    <i class="ri-mail-fill"></i>
+                    <input type="text" placeholder="Enter Company Email">
+                    <a href=""><i class="ri-arrow-right-line"></i></a>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script type="module" src="./compare.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareCart</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+
+    <div class="nav-part">
+        <div class="logo">
+            <img src="logo.png" alt=""> <p>ompareCart</p>
+        </div>
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search Product">
+            <button id="search">Search</button>
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="home.html">Home <i class="ri-home-smile-fill"></i></a></li>
+                <li><a href="categories.html">Categories <i class="ri-menu-search-fill"></i></a></li>
+                <li><a href="wishlist.html"> Wishlist <i class="ri-gift-line"></i></a></li>
+                <li><a href="cart.html" id="cart">Cart <i class="ri-shopping-cart-fill"></i></a></li>
+                <li class="account-link">
+                    <a href="#" id="account-link">Account <i class="ri-account-circle-fill"></i></a>
+                    <div class="dropdown-menu" id="account-dropdown">
+                        <!-- User details section -->
+                        <div id="user-details" style="display: none;">
+                          <p id="user-name"></p>
+                          <p id="user-username"></p>
+                        </div>
+                      
+                        <!-- Sign Up and Sign In links -->
+                        <a href="signup.html" id="signup-button" class="dropdown-item signup"><p class="signin-text">Sign Up</p></a>
+                        <a href="signin.html" id="signin-button" class="dropdown-item signin"><p class="signin-text">Sign In</p></a>
+                      
+                        <!-- Logout button -->
+                        <a href="#" id="logout-button" class="dropdown-item logout" style="display: none;"><p class="signin-text">Logout</p></a>
+                      </div>    
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="wrapper">
+        <div id="sidebar">
+            <h3>Browse By Category</h3>
+            <div id="buttons">
+                <button class="button-value" onclick="filterProduct('All')">All</button>
+                <button class="button-value" onclick="filterProduct('Topwear')">Topwear</button>
+                <button class="button-value" onclick="filterProduct('Bottomwear')">Bottomwear</button>
+                <button class="button-value" onclick="filterProduct('Kidswear')">Kidswear</button>
+                <button class="button-value" onclick="filterProduct('Headphone')">Headphone</button>
+                <button class="button-value" onclick="filterProduct('Traditional')">Traditional</button>
+                <button class="button-value" onclick="filterProduct('Dress')">Dress</button>
+            </div>
+            <div id="price-range">
+                <h3>Product Range</h3>
+                <button onclick="setPriceRange(0, 500)">0 - 500</button>
+                <button onclick="setPriceRange(500, 800)">500 - 800</button>
+                <button onclick="setPriceRange(800, 1200)">800 - 1200</button>
+                <button onclick="setPriceRange(1200, 1800)">1200 - 1800</button>
+                <button onclick="setPriceRange(1800, 2500)">1800 - 2500</button>
+                <button onclick="setPriceRange(2500, 5000)">2500 - 5000</button>
+            </div>
+        </div>
+        
+        <div id="main-content">
+            <div id="products">
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="custom-alert" class="custom-alert">
+        <div class="alert-content">
+            <span id="alert-message"></span>
+            <button id="close-alert">OK</button>
+        </div>
+    </div> -->
+    <!-- Dark overlay to darken the background -->
+<!-- Overlay for Alert 1 -->
+<div id="dark-overlay"></div>
+
+<!-- Alert Box 1 -->
+<div id="custom-alert">
+    <h3>Message</h3>
+    <div id="alert-message"></div>
+    <button id="close-alert">OK</button>
+</div>
+
+<!-- Overlay for Alert 2 -->
+<div id="overlay-2"></div>
+
+<!-- Alert Box 2 -->
+<div id="alert-box">
+    <h3>Alert</h3>
+    <div id="alert-box-message"></div>
+    <button id="alert-box-close">OK</button>
+</div>
+
+
+    <script src="categories.js"></script>
+</body>
+</html>
