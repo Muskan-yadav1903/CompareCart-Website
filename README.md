@@ -67,6 +67,38 @@ This project is a web application that allows users to compare prices for the sa
 
 # OUTPUT
 
+![Image](https://github.com/user-attachments/assets/938b0f83-2fb0-44e2-b1d6-9215445243d8)
+
+![Image](https://github.com/user-attachments/assets/606473f7-b3e7-422d-b04d-9d52c00bea5c)
+
+![Image](https://github.com/user-attachments/assets/ae9e8a62-7479-4554-8fe7-f871986eb7a5)
+
+![Image](https://github.com/user-attachments/assets/4040b0ab-5f7d-4ad8-80ed-6608862a0c5c)
+
+![Image](https://github.com/user-attachments/assets/4315b425-d194-4877-b964-88e3611e4cae)
+
+![Image](https://github.com/user-attachments/assets/82c3e36f-fede-4d08-b97e-b92d7c6025c6)
+
+![Image](https://github.com/user-attachments/assets/26a0bbce-b78e-44a9-8ddc-804e9256e37c)
+
+![Image](https://github.com/user-attachments/assets/3be37e17-94b5-4cf8-a810-370dfa94f52e)
+
+![Image](https://github.com/user-attachments/assets/81567389-b2ea-463d-9793-7060c468b5d6)
+
+![Image](https://github.com/user-attachments/assets/5a4e3078-4493-4626-a4d7-183cbcbd2252)
+
+![Image](https://github.com/user-attachments/assets/130d2e28-b3a7-4ed2-adf4-13fb6e4356d6)
+
+![Image](https://github.com/user-attachments/assets/4d42db18-96f8-462e-a73c-822c2c247760)
+
+![Image](https://github.com/user-attachments/assets/31740dc0-652f-4da7-9c49-f5b196461a20)
+
+![Image](https://github.com/user-attachments/assets/b2a9eebb-56dc-465b-8a5d-14557e2817f0)
+
+![Image](https://github.com/user-attachments/assets/a05c8581-6dd8-48ac-ada3-b6af6815695c)
+
+![Image](https://github.com/user-attachments/assets/7b7a25b3-f75f-442b-b206-d5fd45c8a78f)
+
 
 
 This project offers a robust and user-friendly platform for price comparison shopping, empowering users to make informed purchasing decisions efficiently!
