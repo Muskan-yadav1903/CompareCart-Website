@@ -1,4 +1,4 @@
-# Project Overview : Price Comparison Shopping Website
+# CompareCart : Price Comparison Shopping Website
 This project is a web application that allows users to compare prices for the same product across different e-commerce websites, such as Amazon and Flipkart. The platform helps users make informed purchasing decisions by providing an intuitive interface and advanced filtering options.
 
 
@@ -21,7 +21,7 @@ This project is a web application that allows users to compare prices for the sa
 - Users can search for products by name or category.
 - Displays the product’s price across multiple platforms (e.g., Amazon, Flipkart, etc.).
   
-2.Price Comparison Engine
+2. Price Comparison Engine
 - Automatically fetches and displays prices from various e-commerce websites.
 - Highlights the platform with the lowest price.
   
