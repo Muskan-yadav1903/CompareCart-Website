@@ -11,7 +11,7 @@ This project is a web application that allows users to compare prices for the sa
 
 
 # Backend Technology
-- MongoDB: Acts as the database to store product information (e.g., product name, description, images, price details across multiple websites, user preferences, feedback, and ratings).
+- MongoDB : Acts as the database to store product information (e.g., product name, description, images, price details across multiple websites, user preferences, feedback, and ratings).
 
 
 
