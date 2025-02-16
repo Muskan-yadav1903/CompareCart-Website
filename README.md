@@ -4,9 +4,9 @@ This project is a web application that allows users to compare prices for the sa
 
 
 # Frontend Technologies
-- HTML & CSS: Used for structuring and styling the web pages.
-- JavaScript: Implements interactivity, dynamic content, and functionality like add-to-cart and wishlist.
-- SCSS: Enhances CSS with variables, nesting, and reusable mixins to ensure scalability and maintainability.
+- HTML & CSS : Used for structuring and styling the web pages.
+- JavaScript : Implements interactivity, dynamic content, and functionality like add-to-cart and wishlist.
+- SCSS : Enhances CSS with variables, nesting, and reusable mixins to ensure scalability and maintainability.
 
 
 
@@ -49,19 +49,19 @@ This project is a web application that allows users to compare prices for the sa
 
 
 # Sample User Journey
-1. Search: The user searches for "Men’s Running Shoes."
-2. Filter: They filter by size, color, and price range.
-3. Compare: The app shows shoes available on Amazon, Flipkart, and Myntra with side-by-side price comparison.
-4. Add to Cart: The user selects the best deal and adds it to the cart.
-5. Wishlist: The user adds another product to the wishlist.
-6. Feedback: After receiving the product, they leave feedback and a 5-star rating.
+1. Search : The user searches for "Men’s Running Shoes."
+2. Filter : They filter by size, color, and price range.
+3. Compare : The app shows shoes available on Amazon, Flipkart, and Myntra with side-by-side price comparison.
+4. Add to Cart : The user selects the best deal and adds it to the cart.
+5. Wishlist : The user adds another product to the wishlist.
+6. Feedback : After receiving the product, they leave feedback and a 5-star rating.
 
 
 
 # Potential Enhancements
-- Price Drop Alerts: Notify users when a product’s price drops.
-- Recommendation Engine: Suggest related products based on search and purchase history.
-- Coupons and Discounts: Display available promo codes or discounts from partner sites.
+- Price Drop Alerts : Notify users when a product’s price drops.
+- Recommendation Engine : Suggest related products based on search and purchase history.
+- Coupons and Discounts : Display available promo codes or discounts from partner sites.
 
 
 
